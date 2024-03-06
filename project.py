@@ -17,7 +17,7 @@ def entertask():
     root1.title("Add task")
     entry_task=Text(root1,width=40,height=4)
     entry_task.pack()
-    button_temp=Button(root1,text="Add task",command=add)
+    button_temp=Button(root1,bg="green",text="Add task",command=add)
     button_temp.pack()
     root1.mainloop()
 #function to facilitate the delete task from the Listbox
@@ -44,7 +44,7 @@ root.title("DataFlair To_Do_APP")
 frame_task=Frame(root)
 frame_task.pack()
 #to hold items in a listbox
-listbox_task=Listbox(frame_task,bg="black",fg="white",height=15,width=50,font = "Helvetica")  
+listbox_task=Listbox(frame_task,bg="gray",fg="black",height=15,width=50,font = "Helvetica")  
 listbox_task.pack(side=tkinter.LEFT)
 #Scrolldown in case the total list exceeds the size of the given root 
 scrollbar_task=Scrollbar(frame_task)
@@ -53,12 +53,12 @@ listbox_task.config(yscrollcommand=scrollbar_task.set)
 scrollbar_task.config(command=listbox_task.yview)
 
 #Button widget 
-entry_button=Button(root,text="Add task",width=50,command=entertask)
+entry_button=Button(root,bg="green",text="Add task",width=50,command=entertask)
 entry_button.pack(pady=3)
-delete_button=Button(root,text="Delete selected task",width=50,command=deletetask)
+delete_button=Button(root,bg="red",text="Delete selected task",width=50,command=deletetask)
 delete_button.pack(pady=3)
-mark_button=Button(root,text="Mark as completed ",width=50,command=markcompleted)
-mark_button.pack(pady=3)
+mark_button=Button(root,bg="yellow",text="Mark as completed ",width=50,command=markcompleted)
+mark_button.pack(pady=9)
 root.mainloop()
 
 
